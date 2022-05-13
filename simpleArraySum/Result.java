@@ -19,9 +19,8 @@ public class Result {
 
     public static int simpleArraySum(List<Integer> ar) {
         // Write your code here
-        int n = ar.size();
         int sum = 0;
-        for (int i = 0; i < n; i++) {
+        for (int i = 0; i < ar.size(); i++) {
             sum += ar.get(i);
 
         }

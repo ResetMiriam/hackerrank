@@ -19,17 +19,25 @@ public class Result {
     public static void miniMaxSum(List<Integer> arr) {
         // Write your code here
         int n = arr.size();
-        long max = 0;
-        long min = 0;
-        Collections.sort(arr);
-        for (int i = 1; i < n; i++) {
-            max += arr.get(i);
-        }
-        for (int i = 0; i < n - 1; i++) {
-            min += arr.get(i);
+        int max, min;
+        max = min = arr.get(0);
+        long sum = 0;
+        long maxSum, minSum;
 
+        for (int i = 0; i < n; i++) {
+
+            if (arr.get(i) > max) {
+                max = arr.get(i);
+            }
+            if (arr.get(i) < min) {
+                min = arr.get(i);
+            }
+            sum += arr.get(i);
         }
-        System.out.println(min + " " + max);
+        minSum = sum - max;
+        maxSum = sum - min;
+
+        System.out.println(minSum + " " + maxSum);
     }
 
     public static void main(String[] args) throws IOException {

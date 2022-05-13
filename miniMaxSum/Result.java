@@ -19,8 +19,8 @@ public class Result {
     public static void miniMaxSum(List<Integer> arr) {
         // Write your code here
         int n = arr.size();
-        int max = 0;
-        int min = 0;
+        long max = 0;
+        long min = 0;
         Collections.sort(arr);
         for (int i = 1; i < n; i++) {
             max += arr.get(i);

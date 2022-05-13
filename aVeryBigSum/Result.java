@@ -25,9 +25,8 @@ public class Result {
 
     public static long aVeryBigSum(List<Long> ar) {
         // Write your code here
-        long n = ar.size();
         long sum = 0;
-        for (int i = 0; i < n; i++) {
+        for (int i = 0; i < ar.size(); i++) {
             sum += ar.get(i);
 
         }
